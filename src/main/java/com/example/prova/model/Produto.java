@@ -1,0 +1,43 @@
+package com.example.prova.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+import java.math.BigDecimal;
+
+@Entity
+public class Produto {
+
+    @Id
+    private Integer id;
+
+    private String nome;
+
+    private BigDecimal preco;
+
+
+
+    public Integer getId()  {
+        return id;
+    }
+
+    public void setId(){
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome() {
+        this.nome = nome;
+    }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
+
+    public void setPreco(BigDecimal preco){
+        this.preco = preco;
+    }
+}
