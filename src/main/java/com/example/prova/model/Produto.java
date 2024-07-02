@@ -24,16 +24,16 @@ public class Produto {
         return id;
     }
 
-    public void setId(){
-        this.id = id;
+    public void setId(Integer id){
+        this.id = this.id;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome() {
-        this.nome = nome;
+    public void setNome(String nome) {
+        this.nome = this.nome;
     }
 
     public BigDecimal getPreco() {
