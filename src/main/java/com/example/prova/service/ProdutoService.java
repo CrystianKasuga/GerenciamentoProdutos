@@ -15,26 +15,24 @@ public class ProdutoService {
     private ProdutoRepository produtoRepository;
 
     public Produto criarProduto(Produto produto) {
-        return produtoRepository.save(produto);}
+        return produtoRepository.save(produto);
+    }
 
-    public List<Produto> ListarTodosProdutos(){
-        return produtoRepository.findAll();
-       }
+    public List<Produto> listarTodosProdutos() {
+        return produtoRepository.findAll();}
 
     public Optional<Produto> consultarProdutoPorId(Integer id) {
-        return produtoRepository.findById(id);}
+        return produtoRepository.findById(id);
+    }
 
     public Produto atualizarProduto(Integer id, Produto detalhesProduto) {
-        Produto produto = new Produto();
-        produto.setId(id);
+        Produto produto = produtoRepository.getOne(id);
         produto.setNome(detalhesProduto.getNome());
         produto.setPreco(detalhesProduto.getPreco());
         return produtoRepository.save(produto);
     }
 
-
     public void excluirProduto(Integer id) {
-            produtoRepository.deleteById(id);
-        }
-
+        produtoRepository.deleteById(id);
+    }
 }
